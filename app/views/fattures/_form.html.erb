@@ -10,38 +10,77 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :spettabile %>
-    <%= form.text_field :spettabile %>
+  <center>
+  <div class="col-12">
+    <div class="field">
+   
+    <label for="formGroupExampleInput" class="form-label"><b style="font-size: 20px">Spettabile</b></label>
+    <%= form.text_field :spettabile, class:'form-control' %>
+   
+  </div>
   </div>
 
-  <div class="field">
-    <%= form.label :nomelavoro %>
-    <%= form.text_field :nomelavoro %>
-  </div>
+
 
   <div class="field">
-    <%= form.label :iva %>
-    <%= form.number_field :iva %>
-  </div>
-
-  <div class="field">
-    <%= form.label :descrizione %>
-    <%= form.text_field :descrizione %>
+  <label for="formGroupExampleInput" class="form-label"><b style="font-size: 20px">Nome Lavoro</b></label>
+    <%= form.text_field :nomelavoro, class:'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :quantita %>
-    <%= form.number_field :quantita %>
+  <label for="formGroupExampleInput" class="form-label"><b style="font-size: 20px">Iva</b></label>
+    <%= form.number_field :iva, class:'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :prezzo %>
-    <%= form.text_field :prezzo %>
-  </div>
+ 
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+
+ 
+
+  
+
+
+
+ 
+
+<br>
+
+
+
+<p>
+<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+  Link with href
+</a>
+</p>
+<div class="collapse" id="collapseExample">
+<div class="card card-body">
+<div class="row">
+<div class="col-sm">
+    <label for="formGroupExampleInput" class="form-label"><b>Descrizione</b></label><br>
+    <%= form.text_field :descrizione, class:'form-control' %></div>
+<div class="col-sm">
+    <label for="formGroupExampleInput" class="form-label"><b>Quantità</b></label><br>
+    <%= form.number_field :quantita, class:'form-control' %>
+</div>
+<div class="col-sm">
+
+    <label for="formGroupExampleInput" class="form-label"><b>Prezzo</b></label><br>
+    <%= form.text_field :prezzo, class:'form-control' %></div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="actions">
+<%= form.submit 'Invia', class:'form-control' %>
+</div>
+</center>
 <% end %>
