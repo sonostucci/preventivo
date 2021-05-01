@@ -1,0 +1,47 @@
+<%= form_with(model: fatture) do |form| %>
+  <% if fatture.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fatture.errors.count, "error") %> prohibited this fatture from being saved:</h2>
+
+      <ul>
+        <% fatture.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :spettabile %>
+    <%= form.text_field :spettabile %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nomelavoro %>
+    <%= form.text_field :nomelavoro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :iva %>
+    <%= form.number_field :iva %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descrizione %>
+    <%= form.text_field :descrizione %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantita %>
+    <%= form.number_field :quantita %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prezzo %>
+    <%= form.text_field :prezzo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

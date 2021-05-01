@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Spettabile:</strong>
+  <%= @fatture.spettabile %>
+</p>
+
+<p>
+  <strong>Nomelavoro:</strong>
+  <%= @fatture.nomelavoro %>
+</p>
+
+<p>
+  <strong>Iva:</strong>
+  <%= @fatture.iva %>
+</p>
+
+<p>
+  <strong>Descrizione:</strong>
+  <%= @fatture.descrizione %>
+</p>
+
+<p>
+  <strong>Quantita:</strong>
+  <%= @fatture.quantita %>
+</p>
+
+<p>
+  <strong>Prezzo:</strong>
+  <%= @fatture.prezzo %>
+</p>
+
+<%= link_to 'Edit', edit_fatture_path(@fatture) %> |
+<%= link_to 'Back', fattures_path %>
