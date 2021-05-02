@@ -1,3 +1,5 @@
+
+
 <%= form_with(model: fatture) do |form| %>
   <% if fatture.errors.any? %>
     <div id="error_explanation">
@@ -11,28 +13,41 @@
     </div>
   <% end %>
   <center>
+
+
+  
+  <%= image_tag "paginainserimento.png", class:'w-100' %>
+
+  <br>
+  <br>
+
+  <div class="container">
   <div class="col-12">
     <div class="field">
    
     <label for="formGroupExampleInput" class="form-label"><b style="font-size: 20px">Spettabile</b></label>
-    <%= form.text_field :spettabile, class:'form-control' %>
+    <%= form.text_field :spettabile, class:'form-control', placeholder:'Spett.le' %>
    
   </div>
   </div>
+
+  <br>
 
 
 
   <div class="field">
   <label for="formGroupExampleInput" class="form-label"><b style="font-size: 20px">Nome Lavoro</b></label>
-    <%= form.text_field :nomelavoro, class:'form-control' %>
+    <%= form.text_field :nomelavoro, class:'form-control', placeholder:'N.Lavoro' %>
   </div>
+
+<br>
 
   <div class="field">
   <label for="formGroupExampleInput" class="form-label"><b style="font-size: 20px">Iva</b></label>
-    <%= form.number_field :iva, class:'form-control' %>
+    <%= form.number_field :iva, class:'form-control', placeholder:'Iva' %>
   </div>
 
- 
+ <br>
 
 
  
@@ -43,13 +58,13 @@
 
  
 
-<br>
+
 
 
 
 <p>
 <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-  Link with href
+  ARTICOLO 1
 </a>
 </p>
 <div class="collapse" id="collapseExample">
@@ -75,12 +90,23 @@
 
 
 
-
+<br>
 
 
 
 <div class="actions">
-<%= form.submit 'Invia', class:'form-control' %>
+<div class="container-fluid">
+<%= form.submit 'Invia', class:'w-100' %>
+</div>
 </div>
 </center>
+
+
 <% end %>
+
+<br>
+
+
+
+
+
