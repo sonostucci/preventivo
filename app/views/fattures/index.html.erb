@@ -1,8 +1,13 @@
+<body class="bg-dark">
+
 <%= image_tag 'tuttipreventivi.png', class:'w-100' %>
 
 
-
-
+<div class="container">
+<br>
+<%= link_to 'Nuova Fattura', new_fatture_path, class:'btn btn-info w-100 fw-bold btn-lg' %>
+</div>
+<br>
 <table class="table table-dark table-striped ">
   <thead table-bordered border-light>
     <tr >
@@ -24,7 +29,7 @@
         <td></td>
         <td><%= fatture.spettabile %></td>
         <td><%= fatture.nomelavoro %></td>
-        <td><%= fatture.iva %></td>
+        <td><%= fatture.iva %>%</td>
         <td><%= fatture.descrizione %></td>
         <td><%= fatture.quantita %></td>
         <td><%= fatture.prezzo %>€</td>
@@ -38,5 +43,11 @@
 </table>
 
 <br>
+<br>
+<br>
 
-<%= link_to 'New Fatture', new_fatture_path %>
+<center>
+<%= link_to "Esci", destroy_user_session_path, method: :delete, class:'btn btn-danger fw-bold w-100 fixed-bottom' %>
+</center>
+
+

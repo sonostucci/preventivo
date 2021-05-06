@@ -1,4 +1,5 @@
 class FatturesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_fatture, only: %i[ show edit update destroy ]
 
   # GET /fattures or /fattures.json
