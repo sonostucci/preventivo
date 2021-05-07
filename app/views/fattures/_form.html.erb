@@ -1,3 +1,4 @@
+<body class="bg-dark text-white">
 <div id="pdfpreventivo">
 
 <%= form_with(model: fatture) do |form| %>
@@ -18,19 +19,26 @@
   
   <%= image_tag "paginainserimento.png", class:'w-100' %>
   <br>
+
+
+  
+<div class="container">
+<br>
 <center>
-<%= link_to 'Visualizza tutti i preventivi', fattures_path, class:'btn btn-warning w-100 fw-bold text-dark' %>
+<%= link_to 'Visualizza tutti i preventivi', fattures_path, class:'btn btn-info w-100 fw-bold btn-lg' %>
 </center>
+</div>
+
 
   <br>
-  <br>
+  <hr>
 
   <div class="container">
   <div class="col-12">
     <div class="field">
    
-    <label for="formGroupExampleInput" class="form-label"><b style="font-size: 20px">Spettabile</b></label>
-    <%= form.text_field :spettabile, class:'form-control', placeholder:'Spett.le' %>
+    <label for="formGroupExampleInput" class="form-label"><b style="font-size: 18px">Spettabile</b></label>
+    <%= form.text_field :spettabile, class:'form-control', placeholder:'Spettabile' %>
    
   </div>
   </div>
@@ -40,14 +48,14 @@
 
 
   <div class="field">
-  <label for="formGroupExampleInput" class="form-label"><b style="font-size: 20px">Nome Lavoro</b></label>
-    <%= form.text_field :nomelavoro, class:'form-control', placeholder:'N.Lavoro' %>
+  <label for="formGroupExampleInput" class="form-label"><b style="font-size: 18px">Nome Lavoro</b></label>
+    <%= form.text_field :nomelavoro, class:'form-control', placeholder:'Nome Lavoro' %>
   </div>
 
 <br>
 
   <div class="field">
-  <label for="formGroupExampleInput" class="form-label"><b style="font-size: 20px">Iva</b></label>
+  <label for="formGroupExampleInput" class="form-label"><b style="font-size: 18px">Iva</b></label>
     <%= form.number_field :iva, class:'form-control', placeholder:'Iva' %>
   </div>
 
@@ -67,24 +75,24 @@
 
 
 <p>
-<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+<a class="btn btn-info" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
   ARTICOLO 1
 </a>
 </p>
 <div class="collapse" id="collapseExample">
-<div class="card card-body">
+<div class="card card-body text-white bg-dark border-light">
 <div class="row">
 <div class="col-sm">
     <label for="formGroupExampleInput" class="form-label"><b>Descrizione</b></label><br>
-    <%= form.text_field :descrizione, class:'form-control' %></div>
+    <%= form.text_field :descrizione, class:'form-control', placeholder:'Descrizione' %></div>
 <div class="col-sm">
     <label for="formGroupExampleInput" class="form-label"><b>Quantità</b></label><br>
-    <%= form.number_field :quantita, class:'form-control' %>
+    <%= form.number_field :quantita, class:'form-control', placeholder:'Quantità' %>
 </div>
 <div class="col-sm">
 
     <label for="formGroupExampleInput" class="form-label"><b>Prezzo</b></label><br>
-    <%= form.text_field :prezzo, class:'form-control' %></div>
+    <%= form.text_field :prezzo, class:'form-control', placeholder:'Prezzo' %></div>
 </div>
 </div>
 </div>
@@ -98,18 +106,27 @@
 
 
 
-<div class="actions">
-<div class="container-fluid">
-<%= form.submit 'Invia', class:'w-100' %>
-</div>
-</div>
+
 </center>
 <br>
 <br>
 
+
+
+
+
+
+
+
+<center>
+<div class="actions">
+<div class="container-fluid">
+<%= form.submit 'Crea', class:'w-100 btn btn-primary fw-bold w-100 fixed-bottom' %>
+</div>
+</div>
+</center>
+
+
+
+
 <% end %>
-
-
-
-
-
