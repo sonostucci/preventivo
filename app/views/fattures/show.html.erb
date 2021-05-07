@@ -23,6 +23,11 @@
 </div>
 </center>
 
+
+<br>
+
+
+
 <br>
 <hr>
 <br>
@@ -59,9 +64,15 @@
                 </div>
                 <div class="col-sm">
                         <p style="font-size: 15px; color: dimgray; font-weight: 500">
+                        <%= 
+                        require 'date'
 
+                        current_time = DateTime.now
 
-                        </p>
+                        current_time.strftime "%d/%m/%Y"
+
+                        %>
+                                                </p>
                 </div>
             </div>
         </div>
@@ -79,7 +90,7 @@
                 </div>
                 <div class="col-8">
                     <b style="color: #484848; font-size: 15px">
-                    <p>Spettabile</p>
+                    <%= @fatture.spettabile %>
                 </b>
                     </b>
                     <br>
@@ -127,7 +138,7 @@
             <div class="col-2">
             </div>
             <div class="col-4">
-              <b><p>Nome lavoro<p></b>
+              <b><%= @fatture.nomelavoro %></b>
             </div>
             <div class="col-2">
             </div>
@@ -138,7 +149,29 @@
         </div>
     </div>
 
-
+<div style="font-size: 13px; font-weight: bold;">
+        
+        
+       
+           <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    
+                </div>
+                <div class="col-4">
+                    <%= @fatture.descrizione %>
+                </div>
+                <div class="col-2">
+                     <%= @fatture.quantita %>
+                </div>
+                <div class="col-2">
+                    <%= @fatture.prezzo.round(0) %>€
+                </div>
+                <div class="col-2">
+                    <%= @fatture.quantita * @fatture.prezzo.round(0) %>€
+                </div>
+            </div>
+        </div>
 
 </div>
     <br>
