@@ -17,11 +17,13 @@
 
   
   <% unless notice.nil? %>
-  <p class="notice"><%= notice %></p>
+  <div class="alert alert-success" role="alert">
+  <%= notice %></div>
   <% end %>
   
   <% unless alert.nil? %>
-  <p class="alert"><%= alert %></p>
+  <div class="alert alert-danger" role="alert">
+  <%= alert %></div>
   <% end %>
     
    
