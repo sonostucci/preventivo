@@ -23,4 +23,26 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="bg-info fixed-bottom">
+<br>
+<div class="container">
+  <div class="row">
+     <div class="col-6">
+      <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+      <%= link_to "Registrati", new_registration_path(resource_name), class:'btn btn-dark btn-outline-light w-100' %><br />
+      <% end %>
+    </div>
+    <div class="col-6">
+    <%- if controller_name != 'sessions' %>
+    <%= link_to "Accedi", new_session_path(resource_name), class:'btn btn-dark btn-outline-light w-100' %><br />
+  <% end %>
+    </div>
+  </div>
+</div>
+<br>
+</div
+
+
+
+
+

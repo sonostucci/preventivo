@@ -13,7 +13,19 @@
   </head>
 
   <body>
+  
+
+  
+  <% unless notice.nil? %>
+  <p class="notice"><%= notice %></p>
+  <% end %>
+  
+  <% unless alert.nil? %>
+  <p class="alert"><%= alert %></p>
+  <% end %>
+    
    
+
     <%= yield %>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>

@@ -42,7 +42,9 @@
 
 <div class="bg-info fixed-bottom">
 <br>
-<%= render "devise/shared/links" %>
+<%- if controller_name != 'sessions' %>
+    <%= link_to "Accedi", new_session_path(resource_name), class:'btn btn-dark btn-outline-light w-50' %><br />
+  <% end %>
 <br>
 </div
 
