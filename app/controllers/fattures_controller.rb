@@ -26,7 +26,7 @@ class FatturesController < ApplicationController
 
     respond_to do |format|
       if @fatture.save
-        format.html { redirect_to @fatture, notice: "Fatture was successfully created." }
+        format.html { redirect_to @fatture, notice: "Preventivo creato correttamente" }
         format.json { render :show, status: :created, location: @fatture }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class FatturesController < ApplicationController
   def update
     respond_to do |format|
       if @fatture.update(fatture_params)
-        format.html { redirect_to @fatture, notice: "Fatture was successfully updated." }
+        format.html { redirect_to @fatture, notice: "Preventivo modificato correttamente" }
         format.json { render :show, status: :ok, location: @fatture }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class FatturesController < ApplicationController
   def destroy
     @fatture.destroy
     respond_to do |format|
-      format.html { redirect_to fattures_url, notice: "Fatture was successfully destroyed." }
+      format.html { redirect_to fattures_url, notice: "Preventivo eliminato correttamente" }
       format.json { head :no_content }
     end
   end

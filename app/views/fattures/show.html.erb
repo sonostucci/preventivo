@@ -165,7 +165,7 @@
                      <%= @fatture.quantita %>
                 </div>
                 <div class="col-2">
-                    <%= @fatture.prezzo.round(0) %>€
+                    <%= @fatture.prezzo %>€
                 </div>
                 <div class="col-2">
                     <%= @importo1 = @fatture.quantita * @fatture.prezzo %>€
@@ -309,38 +309,18 @@
 
 
 
+<div class="bg-info fixed-bottom">
+<br>
+<div class="container">
+  <div class="row">
+     <div class="col-6">
+      <%= link_to 'Modifica', edit_fatture_path(@fatture),  class:'btn btn-dark btn-outline-light w-100' %>
+    </div>
+    <div class="col-6">
+    <%= link_to 'Tutti i preventivi', fattures_path, class:'btn btn-dark btn-outline-light w-100' %>
+    </div>
+  </div>
+</div>
+<br>
+</div
 
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Spettabile:</strong>
-  <%= @fatture.spettabile %>
-</p>
-
-<p>
-  <strong>Nomelavoro:</strong>
-  <%= @fatture.nomelavoro %>
-</p>
-
-<p>
-  <strong>Iva:</strong>
-  <%= @fatture.iva %>
-</p>
-
-<p>
-  <strong>Descrizione:</strong>
-  <%= @fatture.descrizione %>
-</p>
-
-<p>
-  <strong>Quantita:</strong>
-  <%= @fatture.quantita %>
-</p>
-
-<p>
-  <strong>Prezzo:</strong>
-  <%= @fatture.prezzo %>
-</p>
-
-<%= link_to 'Edit', edit_fatture_path(@fatture) %> |
-<%= link_to 'Back', fattures_path %>
