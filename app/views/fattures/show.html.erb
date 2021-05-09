@@ -168,7 +168,7 @@
                     <%= @fatture.prezzo.round(0) %>€
                 </div>
                 <div class="col-2">
-                    <%= @fatture.quantita * @fatture.prezzo.round(0) %>€
+                    <%= @importo1 = @fatture.quantita * @fatture.prezzo %>€
                 </div>
             </div>
         </div>
@@ -194,7 +194,9 @@
                 <p style="color: dimgrey">Imponibile</p>
             </div>
             <div class="col-2">
-                <p style="font-weight: 500">imponibile</p>
+                <p style="font-weight: 500">
+                €<%= @Imponibile = @importo1 %>
+                </p>
             </div>
             <div class="col-1">
 
@@ -208,10 +210,12 @@
             <div class="col-7">
             </div>
             <div class="col-2">
-                <p style="color: dimgrey">IVA(percentuale)</p>
+                <p style="color: dimgrey">IVA(<%= @fatture.iva %>%)</p>
             </div>
             <div class="col-2">
-                <p style="font-weight: 500">IVA</p>
+                <p style="font-weight: 500">
+                €<%= @euroiva = @Imponibile * @fatture.iva / 100 %>
+                </p>
             </div>
             <div class="col-1">
 
@@ -229,7 +233,9 @@
                 <b><p style="color: dimgrey; font-size: 18px">Totale</p></b>
             </div>
             <div class="col-2">
-                <b>TOTALE CON IVA</b>
+                <b>
+                €<%= @euroiva + @Imponibile  %>
+                </b>
             </div>
             <div class="col-1">
 

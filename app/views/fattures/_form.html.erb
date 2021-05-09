@@ -4,13 +4,18 @@
 <%= form_with(model: fatture) do |form| %>
   <% if fatture.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(fatture.errors.count, "error") %> prohibited this fatture from being saved:</h2>
 
-      <ul>
+      
+
+      <div class="alert alert-danger" role="alert">
+
         <% fatture.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+          <%= error.full_message %></li>
         <% end %>
-      </ul>
+        
+      </div>
+        
+      
     </div>
   <% end %>
   <center>
@@ -54,8 +59,12 @@
 
   <div class="field">
   <label for="formGroupExampleInput" class="form-label"><b style="font-size: 18px">Iva</b></label>
-    <%= form.number_field :iva, class:'form-control', placeholder:'Iva' %>
+    <%= form.number_field :iva, class:'form-control', placeholder:'Iva', value:'22' %>
   </div>
+
+
+
+
 
  <br>
 

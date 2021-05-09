@@ -67,4 +67,7 @@ class FatturesController < ApplicationController
     def fatture_params
       params.require(:fatture).permit(:spettabile, :nomelavoro, :iva, :descrizione, :quantita, :prezzo)
     end
+
+   
+
 end
