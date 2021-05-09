@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_06_170210) do
+ActiveRecord::Schema.define(version: 2021_05_09_191529) do
 
   create_table "fattures", force: :cascade do |t|
     t.string "spettabile"
@@ -21,6 +21,33 @@ ActiveRecord::Schema.define(version: 2021_05_06_170210) do
     t.decimal "prezzo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "descrizione2"
+    t.integer "quantita2"
+    t.decimal "prezzo2"
+    t.string "descrizione3"
+    t.integer "quantita3"
+    t.decimal "prezzo3"
+    t.string "descrizione4"
+    t.integer "quantita4"
+    t.decimal "prezzo4"
+    t.string "descrizione5"
+    t.integer "quantita5"
+    t.decimal "prezzo5"
+    t.string "descrizione6"
+    t.integer "quantita6"
+    t.decimal "prezzo6"
+    t.string "descrizione7"
+    t.integer "quantita7"
+    t.decimal "prezzo7"
+    t.string "descrizione8"
+    t.integer "quantita8"
+    t.decimal "prezzo8"
+    t.string "descrizione9"
+    t.integer "quantita9"
+    t.decimal "prezzo9"
+    t.string "descrizione10"
+    t.integer "quantita10"
+    t.decimal "prezzo10"
   end
 
   create_table "users", force: :cascade do |t|

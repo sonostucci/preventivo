@@ -65,7 +65,9 @@ class FatturesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def fatture_params
-      params.require(:fatture).permit(:spettabile, :nomelavoro, :iva, :descrizione, :quantita, :prezzo)
+      params.require(:fatture).permit(:spettabile, :nomelavoro, :iva, :descrizione, :quantita, :prezzo, :descrizione2, :quantita2, :prezzo2, :descrizione3, :quantita3, :prezzo3,
+      :descrizione4, :quantita4, :prezzo4, :descrizione5, :quantita5, :prezzo5, :descrizione6, :quantita6, :prezzo6, :descrizione7, :quantita7, :prezzo7, :descrizione8, :quantita8, :prezzo8,
+      :descrizione9, :quantita9, :prezzo9, :descrizione10, :quantita10, :prezzo10)
     end
 
    

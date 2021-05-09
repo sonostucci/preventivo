@@ -173,6 +173,85 @@
         </div>
 
 </div>
+
+
+<div style="font-size: 13px; font-weight: bold;">
+        
+      
+           <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    
+                </div>
+                <div class="col-4">
+                 <% unless @fatture.descrizione2.nil? %>
+                    <%= @fatture.descrizione2 %>
+
+                <% end %>
+                </div>
+                <div class="col-2">
+                <% unless @fatture.quantita2.nil? %>
+                    <%= @fatture.quantita2 %>
+
+                <% end %>
+                     
+                </div>
+                <div class="col-2">
+                 <% unless @fatture.prezzo2.nil? %>
+                    <%= @fatture.prezzo2 %>€
+
+                <% end %>
+                   
+                </div>
+                <div class="col-2">
+                  <% unless @fatture.prezzo2.nil? %>
+                    <%= @importo2 = @fatture.quantita2 * @fatture.prezzo2 %>€
+                    <% end %>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+
+<div style="font-size: 13px; font-weight: bold;">
+        
+      
+           <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    
+                </div>
+                <div class="col-4">
+                 <% unless @fatture.descrizione3.nil? %>
+                    <%= @fatture.descrizione3 %>
+
+                <% end %>
+                </div>
+                <div class="col-2">
+                <% unless @fatture.quantita3.nil? %>
+                    <%= @fatture.quantita3 %>
+
+                <% end %>
+                     
+                </div>
+                <div class="col-2">
+                 <% unless @fatture.prezzo3.nil? %>
+                    <%= @fatture.prezzo3 %>€
+
+                <% end %>
+                   
+                </div>
+                <div class="col-2">
+                  <% unless @fatture.prezzo3.nil? %>
+                    <%= @importo3 = @fatture.quantita3 * @fatture.prezzo3 %>€
+                    <% end %>
+                </div>
+            </div>
+        </div>
+
+</div>
+
     <br>
     <br>
 
