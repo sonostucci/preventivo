@@ -42,7 +42,7 @@ lock "~> 3.16.0"
 
 
 set :application, "preventivo"
-set :repo_url, "https://github.com/sonostucci/preventivo.git"
+set :repo_url, "git@github.com:sonostucci/preventivo.git"
 
 # Deploy to the user's home directory
 set :deploy_to, "/home/deploy/#{fetch :application}"
