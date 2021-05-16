@@ -61,4 +61,4 @@
 #   }
 
 
-server '192.168.1.124', user: 'deploy', roles: %w{app db web}
+server '192.168.1.127', user: 'deploy', roles: %w{app db web}
