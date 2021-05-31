@@ -11,4 +11,7 @@ class Fatture < ApplicationRecord
 
     validates :prezzo, presence: { message: ": Non puoi lasciare vuoto questo campo" } 
 
+    validates :data, presence: { message: ": Non puoi lasciare vuoto questo campo" } 
+
+
 end
