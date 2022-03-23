@@ -35,7 +35,6 @@
 
 
 
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-7">
@@ -555,7 +554,7 @@
             <div class="col-2">
                 <p style="font-weight: 500">
                 €<%= @Imponibile = @importo1.to_d + @importo2.to_d + @importo3.to_d + @importo4.to_d
-                 + @importo5.to_d + @importo6.to_d + @importo7.to_d + @importo8.to_d
+                 + @importo5 + @importo6.to_d + @importo7.to_d + @importo8.to_d
                   + @importo9.to_d + @importo10.to_d 
                   @Imponibile
                   %>
@@ -577,7 +576,7 @@
             </div>
             <div class="col-2">
                 <p style="font-weight: 500">
-                €<%= @euroiva = @Imponibile * @fatture.iva / 100 %>
+                €<%= @euroiva = (@Imponibile * @fatture.iva / 100).round(2) %>
                 </p>
             </div>
             <div class="col-1">
